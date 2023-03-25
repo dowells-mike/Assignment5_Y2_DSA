@@ -1,0 +1,41 @@
+/*
+Mike Dowell's Siegni
+3086994
+25/03/2023
+ */
+public class Test {
+      public static void main(String[] args) {
+
+          StackArray<Integer> stack = new StackArray<>(5);
+          stack.push(1);
+          stack.push(2);
+          stack.push(3);
+          System.out.println(stack.top()); // Output: 3
+          stack.pop();
+          System.out.println(stack.top()); // Output: 2
+          stack.pop();
+          System.out.println(stack.top()); // Output: 1
+          stack.pop();
+          System.out.println(stack.empty()); // Output: true
+          stack.pop();
+          System.out.println(stack.pop()); // Output: false
+
+          QueueList<String> queue = new QueueList<>();
+          queue.enqueue("a");
+          queue.enqueue("b");
+          queue.enqueue("c");
+          System.out.println(queue); // Output: [a, b, c]
+          System.out.println(queue.top()); // Output: a
+          queue.dequeue();
+          System.out.println(queue); // Output: [b, c]
+          System.out.println(queue.contains("c")); // Output: true
+          System.out.println(queue.contains("d")); // Output: false
+          while (!queue.empty()) {
+              System.out.println(queue.top());
+              queue.dequeue();
+          }
+          // Output:
+          // b
+          // c
+     }
+}

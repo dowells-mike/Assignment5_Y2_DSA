@@ -12,7 +12,7 @@ public class StackArray<E> implements Stack<E> {
     private int top;
 
     public StackArray(int capacity) {
-        data = (E[]) new Object[capacity]; // create array with capacity
+        data = (E[]) new Object[capacity]; //create array with capacity
         top = -1;
     }
 

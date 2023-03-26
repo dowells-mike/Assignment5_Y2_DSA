@@ -6,11 +6,11 @@ Mike Dowell's Siegni
 import java.util.Iterator;
 
 interface Stack<E> {
-    public boolean push(E x);
-    public boolean pop();
-    public E top();
-    public boolean empty();
-    public boolean full();
-    public Iterator<E> iterator();
+    public boolean push(E x); //function to add an element to the top of the stack
+    public boolean pop(); //function to remove an element from the top of the stack
+    public E top(); // function to return the top element of the stack
+    public boolean empty(); //function to check if the stack is empty
+    public boolean full(); //function to check if the stack is full
+    public Iterator<E> iterator(); //function to return an iterator of the stack
 
 }

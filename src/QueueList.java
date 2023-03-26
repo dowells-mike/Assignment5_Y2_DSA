@@ -36,7 +36,17 @@ public class QueueList<E> implements Queue<E> {
 
     @Override
     public String toString() {
-        return data.toString();
+        StringBuilder sb = new StringBuilder();
+        Iterator<E> it = iterator();//creating an iterator from the Iterator function
+        sb.append("[");
+        while (it.hasNext()) {
+            sb.append(it.next());
+            if (it.hasNext()) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
     @Override

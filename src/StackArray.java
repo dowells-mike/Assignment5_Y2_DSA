@@ -3,15 +3,16 @@ Mike Dowell's Siegni
 3086994
 25/03/2023
  */
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class StackArray<E> implements Stack<E> {
 
-    private E[] data;
+    private E[] data; // array of elements
     private int top;
 
     public StackArray(int capacity) {
-        data = (E[]) new Object[capacity];
+        data = (E[]) new Object[capacity]; // create array with capacity
         top = -1;
     }
 
@@ -20,7 +21,7 @@ public class StackArray<E> implements Stack<E> {
         if (full()) {
             return false;
         }
-        data[++top] = x;
+        data[++top] = x; // increment top and push x
         return true;
     }
 
@@ -29,7 +30,7 @@ public class StackArray<E> implements Stack<E> {
         if (empty()) {
             return false;
         }
-        data[top--] = null;
+        data[top--] = null; // decrement top and pop x
         return true;
     }
 
@@ -50,6 +51,6 @@ public class StackArray<E> implements Stack<E> {
 
     @Override
     public Iterator<E> iterator() {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException();//the iterator method is not supported for arrays
     }
 }
